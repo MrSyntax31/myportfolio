@@ -201,6 +201,9 @@
     padding: 0 20px 0 0;
     float: left;
   }
+  .box-set__knight-image {
+    width: 100%;
+  }
   .box-set__header {
     float: left;
     color: #fff;
@@ -213,74 +216,4 @@
     font-size: 15px;
     display: block;
     font-weight: normal;
-  }
-
-
-  .flex {
-    margin: 0;
-    display: flex;
-    margin-bottom: 2rem;
-  }
-  /* optional: alternately flips module layout 
-  .flex:nth-child(odd) {
-    flex-direction: row-reverse;
-  }
-  */
-  .flex div:first-child {
-    flex: 1;
-    background-size: cover;
-    background-position: center;
-  }
-  .flex:first-of-type div:first-child {
-    background-image: url("../assets/images/small.jpg");
-  }
-  .flex:last-of-type div:first-child {
-    background-image: url("../assets/images/small.jpg");
-  }
-  .flex div:last-child {
-    margin: 2rem;
-    flex: 2;
-  }
-  .flex h3 {
-    font-size: 1.5rem;
-    margin-top: 0;
-    font-weight: 400;
-  }
-  .flex p {
-    font-size: 1rem;
-    line-height: 1.4;
-    font-weight: 400;
-  }
-  .flex p:last-of-type {
-    margin-bottom: 0;
-  }
-  .column {
-    width: 80%;
-    margin: 0 auto;
-    max-width: 700px;
-  }
-  @media all and (max-width: 600px) {
-    body { margin: 0; }
-    .flex div { flex: 1 !important; } 
-  }
-  @media all and (max-width: 450px) {
-    h2 {
-      margin: 1rem;
-    }
-    .flex {
-      border: 0;
-      margin: 0;
-    }
-    .flex div:last-child {
-      margin: 1rem;
-    }
-    .column {
-      width: 100%;
-    }
-  }
-  @media all and (max-width: 400px) {
-    .flex { flex-direction: column; } 
-    .flex div:first-child {
-      min-height: 200px;
-    }
   }

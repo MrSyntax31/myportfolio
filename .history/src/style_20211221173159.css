@@ -216,9 +216,58 @@
   }
 
 
+
+  .module {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/skyscrapers.jpg);
+    background-attachment: fixed;
+    width: 400px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+  }
+  .module > header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10px;
+    background: inherit;
+    background-attachment: fixed;
+  }
+  .module > header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    background-attachment: fixed;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    transform: scale(2) translateY(20px);
+  }
+  .module > header > h1 {
+    margin: 0;
+    color: white;
+    position: relative;
+    z-index: 1;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+
+
+
+
   .flex {
     margin: 0;
     display: flex;
+    border: 5px solid #333;
+    background-color: #fff;
     margin-bottom: 2rem;
   }
   /* optional: alternately flips module layout 
@@ -232,10 +281,10 @@
     background-position: center;
   }
   .flex:first-of-type div:first-child {
-    background-image: url("../assets/images/small.jpg");
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/aloe-polyphylla-2x.jpg");
   }
   .flex:last-of-type div:first-child {
-    background-image: url("../assets/images/small.jpg");
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/wire-worm.jpg");
   }
   .flex div:last-child {
     margin: 2rem;
@@ -261,7 +310,7 @@
   }
   @media all and (max-width: 600px) {
     body { margin: 0; }
-    .flex div { flex: 1 !important; } 
+    // .flex div { flex: 1 !important; } 
   }
   @media all and (max-width: 450px) {
     h2 {
@@ -270,6 +319,7 @@
     .flex {
       border: 0;
       margin: 0;
+      border-bottom: 2px solid #333;
     }
     .flex div:last-child {
       margin: 1rem;
